@@ -1,0 +1,14 @@
+LineNumber        Address      Label        Mnemonic       Operands
+
+1                     0x0      .2345678901234567890123456789
+2                     0x0      .2345678901234567890123456789
+3                   0x3A0     PROGRM           START            3A0
+4                   0x3A0                       ADDR            A,X
+5                   0x3A2                       +ADD         LBL1+1
+6                   0x3A6                       BASE            1F4
+7                   0x3A6                        ADD            FA0
+8                   0x3A9            .THIS IS A COMMENT LINE
+9                   0x3A9       LBL1            BYTE      C'ABCDEF'
+10                  0x3AF                       BYTE         X'AB7'
+11                  0x3B0       LBL2            WORD              4
+12                  0x3B3                        END               

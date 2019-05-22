@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXMLDocumentController">
+   <children>
+      <TabPane fx:id="tabpane" layoutY="47.0" style="-fx-background-color: white; -fx-border-color: #e53cff;">
+         <tabs>
+            <Tab text="Code">
+               <content>
+                  <TextArea fx:id="code" prefHeight="534.0" prefWidth="780.0" promptText="// TODO code application logic here">
+                     <font>
+                        <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextArea>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <ImageView fitHeight="47.0" fitWidth="54.0" layoutX="122.0" layoutY="3.0" onMousePressed="#run">
+         <image>
+            <Image url="@run.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="54.0" layoutX="68.0" onMousePressed="#Save">
+         <image>
+            <Image url="@save.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="176.0" layoutY="3.0" onMousePressed="#symTable">
+         <image>
+            <Image url="@table.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="54.0" layoutX="14.0" onMousePressed="#Open">
+         <image>
+            <Image url="@open.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="fixed" layoutX="560.0" layoutY="5.0" mnemonicParsing="false" onAction="#setTextArea" text="Fixed Format">
+         <toggleGroup>
+            <ToggleGroup fx:id="formats" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="free" layoutX="560.0" layoutY="27.0" mnemonicParsing="false" onAction="#setTextArea" text="Free Format" toggleGroup="$formats" />
+   </children>
+</AnchorPane>

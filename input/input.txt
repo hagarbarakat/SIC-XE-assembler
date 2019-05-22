@@ -1,0 +1,11 @@
+.2345678901234567890123456789
+PROGRM   START   3A0
+         ADDR    A,X
+         +ADD    LBL1,X
+         BASE    1F4
+         ADD     FA0
+.THIS IS A COMMENT LINE
+LBL1     BYTE    C'ABCDEF'
+         BYTE    X'AB7'
+LBL2     WORD    4
+         END	 3A0
